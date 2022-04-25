@@ -1,4 +1,4 @@
-﻿namespace Board
+﻿namespace Boards
 {
     internal class Piece
     {
@@ -14,5 +14,7 @@
             this.Colors = color;
             this.AmountOfMovements = 0;
         }
+
+        
     }
 }

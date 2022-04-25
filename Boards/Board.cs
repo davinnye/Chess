@@ -1,4 +1,4 @@
-﻿namespace Board
+﻿namespace Boards
 {
     internal class Board
     {
@@ -11,6 +11,10 @@
             Row = row;
             Column = column;
             Pieces = new Piece[row, column];
+        }
+        public Piece piece(int row, int column)
+        {
+            return Pieces[row, column];
         }
     }
 }

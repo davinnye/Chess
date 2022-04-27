@@ -2,15 +2,15 @@
 
 namespace Pieces
 {
-    internal class Queen : Piece
+    internal class Rook : Piece
     {
-        public Queen (Board board, Colors color) : base(board, color)
+        public Rook (Board board, Colors color) : base(board, color)
         {
         }
 
         public override string ToString()
         {
-            return "Q";
+            return "R";
         }
     }
 }

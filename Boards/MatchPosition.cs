@@ -1,15 +1,19 @@
-﻿namespace Boards
+﻿using Boards;
+using Pieces;
+
+namespace Boards
 {
-    class Position
+    class MatchPosition
     {
         public int row { get; set; }
         public int column { get; set; }
 
-        public Position(int row, int column)
+        public MatchPosition(int column, int row)
         {
             this.row = row;
             this.column = column;
         }
+                
 
         public override string ToString()
         {

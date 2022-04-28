@@ -17,12 +17,12 @@
             return Pieces[row, column];
         }
 
-        public Piece pc(Position position)
+        public Piece pc(MatchPosition position)
         {
             return Pieces[position.row, position.column];
         }
 
-        public void placePiece(Piece piece, Position position)
+        public void placePiece(Piece piece, MatchPosition position)
         {
             if (existingPiece(position))
             {
@@ -34,13 +34,13 @@
         }
 
 
-        public bool existingPiece (Position position)
+        public bool existingPiece (MatchPosition position)
         {
             validatePosition(position);
             return pc(position) != null;
         }
 
-        public bool validPosition(Position position)
+        public bool validPosition(MatchPosition position)
         {
             if (position.row < 0 || position.row >= Row || position.column < 0 || position.column >= Column)
             {
@@ -49,7 +49,7 @@
             return true;
         }
 
-        public void validatePosition (Position position)
+        public void validatePosition (MatchPosition position)
         {
             if (!validPosition(position))
             {

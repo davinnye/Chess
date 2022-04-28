@@ -2,12 +2,12 @@
 {
     internal class Piece
     {
-        public Position Position { get; set; }
+        public MatchPosition Position { get; set; }
         public Colors Colors { get; protected set; }
         public int AmountOfMovements { get; protected set; }
         public Board Board { get; protected set; }
 
-        public Piece (Board board, Colors color)
+        public Piece(Board board, Colors color)
         {
             this.Position = null;
             this.Board = board;

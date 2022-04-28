@@ -17,10 +17,44 @@
             return Pieces[row, column];
         }
 
+        public Piece pc(Position position)
+        {
+            return Pieces[position.row, position.column];
+        }
+
         public void placePiece(Piece piece, Position position)
         {
+            if (existingPiece(position))
+            {
+                throw new BoardException("There is a piece set for this position already!");
+            }
+
             Pieces [position.row, position.column] = piece;
             piece.Position = position;
+        }
+
+
+        public bool existingPiece (Position position)
+        {
+            validatePosition(position);
+            return pc(position) != null;
+        }
+
+        public bool validPosition(Position position)
+        {
+            if (position.row < 0 || position.row >= Row || position.column < 0 || position.column >= Column)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public void validatePosition (Position position)
+        {
+            if (!validPosition(position))
+            {
+                throw new BoardException("Invalid position!");
+            }
         }
     }
 }

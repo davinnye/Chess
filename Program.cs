@@ -14,6 +14,8 @@ namespace Chess
                 board.placePiece(new Rook(board, Colors.Black), new MatchPosition(0, 0));
                 board.placePiece(new Rook(board, Colors.Black), new MatchPosition(7, 0));
                 board.placePiece(new King(board, Colors.White), new MatchPosition(3, 5));
+                board.placePiece(new Queen(board, Colors.White), new MatchPosition(3, 4));
+                board.placePiece(new Queen(board, Colors.Black), new MatchPosition(5, 4));
 
 
                 Screen.printBoard(board);

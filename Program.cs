@@ -12,9 +12,20 @@ namespace Chess
             {
                 ChessMatch chessMatch = new ChessMatch();
 
+                while (!chessMatch.ended)
+                {
+                    Console.Clear();
+                    Screen.printBoard(chessMatch.Board);
 
-                Screen.printBoard(chessMatch.Board);
-                Console.ReadLine();
+                    Console.WriteLine();
+                    Console.Write("Piece origin ");
+                    MatchPosition origin = Screen.readMatchPosition().toChessPosition();
+                    Console.Write("Piece destiny ");
+                    MatchPosition destiny = Screen.readMatchPosition().toChessPosition();
+                    chessMatch.performMovement(origin, destiny);
+                }
+
+                
             }
             catch (BoardException e)
             {

@@ -8,6 +8,7 @@ namespace Chess
         public Board Board { get; private set; }
         private int turn;
         private Colors PlayerTurn;
+        public bool ended { get; private set; }
 
        
         public ChessMatch()
@@ -16,6 +17,7 @@ namespace Chess
             turn = 1;
             PlayerTurn = Colors.White;
             setPieces();
+            ended = false;
         }
 
         public void performMovement (MatchPosition origin, MatchPosition destiny)

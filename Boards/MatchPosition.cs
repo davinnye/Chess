@@ -20,7 +20,7 @@ namespace Boards
 
         public override string ToString()
         {
-            return $"{row}, {column}";
+            return $"{column}, {row}";
         }
     }
 }

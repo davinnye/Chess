@@ -33,6 +33,18 @@
             piece.Position = position;
         }
 
+        public Piece takePieceAway(MatchPosition matchPosition)
+        {
+            if (pc(matchPosition) == null)
+            {
+                return null;
+            }
+
+            Piece aux = pc(matchPosition);
+            aux.Position = null;
+            Pieces[matchPosition.row, matchPosition.column] = null;
+            return aux;
+        }
 
         public bool existingPiece (MatchPosition position)
         {

@@ -13,7 +13,10 @@ namespace Boards
             this.row = row;
             this.column = column;
         }
-                
+        public MatchPosition toChessPosition()
+        {
+            return new MatchPosition((column - 'a'), 8 - row);
+        }
 
         public override string ToString()
         {

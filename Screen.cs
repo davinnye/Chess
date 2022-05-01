@@ -37,11 +37,13 @@ namespace Chess
                         Console.BackgroundColor = originalBackground;
                     }
                     Screen.printPiece(board.piece(i, j));
+                    Console.BackgroundColor = originalBackground;
                 }
                 Console.WriteLine();
             }
             Console.WriteLine("  A B C D E F G H");
             Console.BackgroundColor = originalBackground;
+
         }
 
         public static void printPiece(Piece piece)

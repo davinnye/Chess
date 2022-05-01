@@ -21,8 +21,11 @@ namespace Chess
                     Console.Write("Piece origin ");
                     MatchPosition origin = Screen.readMatchPosition().toChessPosition();
 
-                    
+                    bool[,] possiblePositions = chessMatch.Board.pc(origin).allowedMovements();
+                    Console.Clear();
+                    Screen.printBoard(chessMatch.Board, possiblePositions);
 
+                    Console.WriteLine();
                     Console.Write("Piece destiny ");
                     MatchPosition destiny = Screen.readMatchPosition().toChessPosition();
                     chessMatch.performMovement(origin, destiny);

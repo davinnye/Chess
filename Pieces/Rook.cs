@@ -25,7 +25,7 @@ namespace Pieces
 
             //Top
             position.setValues(Board.Row - 1, Board.Column);
-            while (!Board.validPosition(position) && canMove(position))
+            while (Board.validPosition(position) && canMove(position))
             {
                 move[position.row, position.column] = true;
                 if (Board.pc(position) != null && Board.pc(position).Colors != this.Colors)
@@ -34,10 +34,11 @@ namespace Pieces
                 }
                 position.row = position.row - 1;
             }
+            
 
             //Down
             position.setValues(Board.Row + 1, Board.Column);
-            while (!Board.validPosition(position) && canMove(position))
+            while (Board.validPosition(position) && canMove(position))
             {
                 move[position.row, position.column] = true;
                 if (Board.pc(position) != null && Board.pc(position).Colors != this.Colors)
@@ -49,7 +50,7 @@ namespace Pieces
 
             //Left
             position.setValues(Board.Row, Board.Column - 1);
-            while (!Board.validPosition(position) && canMove(position))
+            while (Board.validPosition(position) && canMove(position))
             {
                 move[position.row, position.column] = true;
                 if (Board.pc(position) != null && Board.pc(position).Colors != this.Colors)
@@ -61,7 +62,7 @@ namespace Pieces
 
             //Right
             position.setValues(Board.Row, Board.Column + 1);
-            while (!Board.validPosition(position) && canMove(position))
+            while (Board.validPosition(position) && canMove(position))
             {
                 move[position.row, position.column] = true;
                 if (Board.pc(position) != null && Board.pc(position).Colors != this.Colors)

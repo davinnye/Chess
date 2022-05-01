@@ -18,7 +18,7 @@ namespace Boards
             return new MatchPosition((column - 'a'), 8 - row);
         }
 
-        public void setValues(int column, int row)
+        public void setValues(int row, int column)
         {
             this.row = row;
             this.column = column;

@@ -19,7 +19,11 @@
 
         public Piece pc(MatchPosition position)
         {
-            return Pieces[position.row, position.column];
+            if (position.row < 8 && position.column < 8)
+            {
+                return Pieces[position.row, position.column];
+            }
+            return null;
         }
 
         public void placePiece(Piece piece, MatchPosition position)

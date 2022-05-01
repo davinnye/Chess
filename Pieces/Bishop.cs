@@ -8,9 +8,16 @@ namespace Pieces
         {
         }
 
+       
+
         public override string ToString()
         {
             return "B";
         }
+        public override bool[,] allowedMovements()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

@@ -18,6 +18,12 @@ namespace Boards
             return new MatchPosition((column - 'a'), 8 - row);
         }
 
+        public void setValues(int column, int row)
+        {
+            this.row = row;
+            this.column = column;
+        }
+
         public override string ToString()
         {
             return $"{column}, {row}";

@@ -12,5 +12,10 @@ namespace Pieces
         {
             return "H";
         }
+
+        public override bool[,] allowedMovements()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

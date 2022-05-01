@@ -43,10 +43,7 @@ namespace Chess
             Board.placePiece(new Queen(Board, Colors.Black), new MatchPosition('d', 8).toChessPosition());
             Board.placePiece(new King(Board, Colors.Black), new MatchPosition('e', 8).toChessPosition());
 
-            for (int i = 1; i <= 8; i++)
-            {
-                Board.placePiece(new Pawn(Board, Colors.White), new MatchPosition(('i' - i), 2).toChessPosition());
-            }
+            
             Board.placePiece(new Rook(Board, Colors.White), new MatchPosition('a', 1).toChessPosition());
             Board.placePiece(new Rook(Board, Colors.White), new MatchPosition('h', 1).toChessPosition());
             Board.placePiece(new Bishop(Board, Colors.White), new MatchPosition('c', 1).toChessPosition());

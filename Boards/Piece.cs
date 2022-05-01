@@ -1,6 +1,6 @@
 ﻿namespace Boards
 {
-    internal class Piece
+    abstract class Piece
     {
         public MatchPosition Position { get; set; }
         public Colors Colors { get; protected set; }
@@ -19,6 +19,8 @@
         {
             AmountOfMovements++;
         }
+
+        public abstract bool[,] allowedMovements();
         
     }
 }
